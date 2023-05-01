@@ -1,0 +1,57 @@
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+.keyboard {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #c7c7c7;
+    padding: 10px;
+    border-radius: 8%;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  button {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    color: #333333;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+
+  
+  button:focus {
+    outline: none;
+  } 
+  .special-key {
+    background-color: #aaaaaa;
+    border: none;
+    border-radius: 5px;
+    color: #333333;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+  }
+.space{
+    width: 200px;
+}
+.active{
+    background-color: #9ac3ff;
+}
+
+.active_space{
+  background-color: #9ac3ff;
+  width: 200px;
+}
