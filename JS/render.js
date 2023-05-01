@@ -17,14 +17,14 @@ let row_Five = document.createElement('div');
 
 
 // Специальные символы
-    let specialKey = ['`', 'Backspace', 'Tab','&bsol;', 'CapsLock',"Enter", 'Shift-L','Shift-R', '↑', 'Control', 'Win', 'Alt', 'Space', 'Alt', 'Win', 'Fn', 'Control', '←', '↓', '→']
+    let specialKey = ['`', 'Backspace', 'Tab','&bsol;', 'CapsLock',"Enter", 'Shift-L','Shift-R', '↑', 'Ctrl-L', 'Win', 'Alt-l', 'Space', 'Alt-r', 'Win', 'Fn', 'Ctrl-R', '←', '↓', '→']
 
     // Массив символов для клавишь
      let row_Keycap_One = ['`','1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace'];
      let row_Keycap_Two = ['Tab', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '[', ']', '&bsol;']
      let row_Keycap_Tree = ['CapsLock','A','S','D','F','G','H','J','K','L',';',"'", "Enter"]
      let row_Keycap_Four = ['Shift-L', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ',', '.', '/', 'Shift-R', '↑']
-     let row_Keycap_Five = ['Control', 'Win', 'Alt', 'Space', 'Alt', 'Win', 'Fn', 'Control', '←', '↓', '→']
+     let row_Keycap_Five = ['Ctrl-L', 'Win', 'Alt-l', 'Space', 'Alt-r', 'Win', 'Fn', 'Ctrl-R', '←', '↓', '→']
 
   
 
@@ -59,6 +59,28 @@ function renderRow(row, keycap) {
              }if (keycap[i] == 'Shift-R') {
                 button.classList.add('shift-R')
              }
+             if (keycap[i] == 'Ctrl-L') {
+                button.classList.add('ctrl-L')
+             }
+             if (keycap[i] == 'Ctrl-R') {
+                button.classList.add('ctrl-R')
+             }
+             if (keycap[i] == 'Ctrl-L') {
+                button.classList.add('ctrl-L')
+             }
+             if (keycap[i] == 'Ctrl-R') {
+                button.classList.add('ctrl-R')
+             }
+             if (keycap[i] == 'Alt-l') {
+                button.classList.add('Alt-L')
+             }
+             if (keycap[i] == 'Alt-r') {
+                button.classList.add('Alt-R')
+             }
+
+
+
+
            }
         
     } 
