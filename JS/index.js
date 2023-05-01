@@ -88,8 +88,7 @@ RenderHTML();
  
 
 
-
-// По клику мыши стили
-//  button[i].addEventListener('click', function (evt) {
-//     button[i].className = 'active'
-//      })
+ // По клику мыши стили
+  button[i].addEventListener('click', function (evt) {
+     button[i].className = 'active'
+      })
