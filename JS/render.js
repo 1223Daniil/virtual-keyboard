@@ -6,7 +6,7 @@ export function RenderHTML() {
 let body = document.querySelector('body');
 let container = document.createElement('main');
 let keyboard = document.createElement('div');
-let button = document.createElement('button');
+let input = document.createElement('textarea');
 
 let row_One = document.createElement('div');
 let row_Two = document.createElement('div');
@@ -17,14 +17,14 @@ let row_Five = document.createElement('div');
 
 
 // Специальные символы
-    let specialKey = ['`', 'Backspace', 'Tab','&bsol;', 'CapsLK',"Enter", 'Shift','Shift', '↑', 'Ctrl', 'Win', 'Alt', 'Space', 'Alt', 'Win', 'Fn', 'Ctrl', '←', '↓', '→']
+    let specialKey = ['`', 'Backspace', 'Tab','&bsol;', 'CapsLock',"Enter", 'Shift-L','Shift-R', '↑', 'Control', 'Win', 'Alt', 'Space', 'Alt', 'Win', 'Fn', 'Control', '←', '↓', '→']
 
     // Массив символов для клавишь
      let row_Keycap_One = ['`','1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace'];
      let row_Keycap_Two = ['Tab', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '[', ']', '&bsol;']
-     let row_Keycap_Tree = ['CapsLK','A','S','D','F','G','H','J','K','L',';',"'", "Enter"]
-     let row_Keycap_Four = ['Shift', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ',', '.', '/', 'Shift', '↑']
-     let row_Keycap_Five = ['Ctrl', 'Win', 'Alt', 'Space', 'Alt', 'Win', 'Fn', 'Ctrl', '←', '↓', '→']
+     let row_Keycap_Tree = ['CapsLock','A','S','D','F','G','H','J','K','L',';',"'", "Enter"]
+     let row_Keycap_Four = ['Shift-L', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ',', '.', '/', 'Shift-R', '↑']
+     let row_Keycap_Five = ['Control', 'Win', 'Alt', 'Space', 'Alt', 'Win', 'Fn', 'Control', '←', '↓', '→']
 
   
 
@@ -48,9 +48,16 @@ function renderRow(row, keycap) {
             if (keycap[i] == specialKey[j]) {
                 button.className = 'special-key'
              }
+              // Доп Клавиши или же Дебаг
+
              if (keycap[i] == 'Space') {
-                button.className = 'special-key'
+              
                 button.classList.add('space')
+             }
+             if (keycap[i] == 'Shift-L') {
+                button.classList.add('shift-L')
+             }if (keycap[i] == 'Shift-R') {
+                button.classList.add('shift-R')
              }
            }
         
@@ -72,12 +79,18 @@ renderRow(row_Five, row_Keycap_Five)
 container.className = 'container'
 keyboard.className = 'keyboard'
 row_Keycap_One.className = 'row'
+input.className = 'input'
 
+input.className = 'shift_L'
+input.className = 'shift_R'
+input.className = 'input'
 
 
 // Дабавляю HTML
 body.append(container)
+container.append(input)
 container.append(keyboard)
+
 keyboard.append(row_One)
 keyboard.append(row_Two)
 keyboard.append(row_Tree)

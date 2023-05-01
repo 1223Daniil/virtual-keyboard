@@ -55,3 +55,18 @@
   background-color: #9ac3ff;
   width: 200px;
 }
+.input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  display: block;
+  margin: 20px 0px 40px 0px;
+  width: 100%;
+  font-size: larger;
+}
+*{
+  font-size: 20px;
+}
