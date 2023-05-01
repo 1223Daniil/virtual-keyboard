@@ -20,9 +20,9 @@ RenderHTML();
 
     window.addEventListener('keydown', function (evt) {
         
-  console.log(evt.code);
+ 
         for (let i = 0; i < button.length; i++) {
-            
+           
             if (evt.key ==  button[i].getAttribute('keyname') || evt.key == button[i].getAttribute('LowerCaseName')) {
                 button[i].classList.add('active')
             }
@@ -83,13 +83,17 @@ RenderHTML();
                 if (evt.code == 'AltRight') {
                     AltRight.classList.remove('active')
                 }
-
+               
             }})
  
 
-
+for (let i = 0; i < button.length; i++) {
+    button[i].addEventListener('mousedown', function (evt) {
+        button[i].classList.add('active')
+         })
+         button[i].addEventListener('mouseup', function (evt) {
+            button[i].classList.remove('active')
+             })
+}
 
 // По клику мыши стили
- button[i].addEventListener('click', function (evt) {
-    button[i].className = 'active'
-     })
