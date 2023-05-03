@@ -10,7 +10,13 @@ RenderHTML();
  let CtrlRight = document.querySelector('.ctrl-R');
  let AltLeft = document.querySelector('.Alt-L');
  let AltRight = document.querySelector('.Alt-R');
+ let Win = document.querySelector('.keycapWin');
+ let WinR = document.querySelector('.keycapWin-R');
 
+ let Arrow_Up = document.querySelector('.Arrow-Up');
+ let Arrow_Left = document.querySelector('.Arrow-Left');
+ let Arrow_Down = document.querySelector('.Arrow-Down');
+ let Arrow_Right = document.querySelector('.Arrow-Right');
  for (let i = 0; i < button.length; i++) {
 
     
@@ -19,7 +25,7 @@ RenderHTML();
     }
 
     window.addEventListener('keydown', function (evt) {
-        
+        console.log(evt.code);
  
         for (let i = 0; i < button.length; i++) {
            
@@ -49,6 +55,24 @@ RenderHTML();
             if (evt.code == 'AltRight') {
                 AltRight.classList.add('active')
             }
+            if (evt.code == 'MetaLeft') {
+                Win.classList.add('active')
+            }
+          
+
+            if (evt.code == 'ArrowUp') {
+                Arrow_Up.classList.add('active')
+            }
+            if (evt.code == 'ArrowLeft') {
+                Arrow_Left.classList.add('active')
+            }
+            if (evt.code == 'ArrowDown') {
+                Arrow_Down.classList.add('active')
+            }
+            if (evt.code == 'ArrowRight') {
+                Arrow_Right.classList.add('active')
+            }
+          
             
         }})
 
@@ -83,11 +107,29 @@ RenderHTML();
                 if (evt.code == 'AltRight') {
                     AltRight.classList.remove('active')
                 }
-               
+                if (evt.code == 'MetaLeft') {
+                    Win.classList.remove('active')
+                }
+            
+
+                if (evt.code == 'ArrowUp') {
+                    Arrow_Up.classList.remove('active')
+                }
+                if (evt.code == 'ArrowLeft') {
+                    Arrow_Left.classList.remove('active')
+                }
+                if (evt.code == 'ArrowDown') {
+                    Arrow_Down.classList.remove('active')
+                }
+                if (evt.code == 'ArrowRight') {
+                    Arrow_Right.classList.remove('active')
+                }
+                
             }})
  
 
 for (let i = 0; i < button.length; i++) {
+
     button[i].addEventListener('mousedown', function (evt) {
         button[i].classList.add('active')
          })
@@ -96,4 +138,4 @@ for (let i = 0; i < button.length; i++) {
              })
 }
 
-// По клику мыши стили
+
